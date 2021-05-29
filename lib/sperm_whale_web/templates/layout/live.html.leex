@@ -1,0 +1,13 @@
+<%= live_render @socket, SpermWhale.Tepmlates.HeaderComponent, session: %{}, id: "navbar" %>
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"
+    phx-click="lv:clear-flash"
+    phx-value-key="info"><%= live_flash(@flash, :info) %></p>
+
+  <p class="alert alert-danger" role="alert"
+    phx-click="lv:clear-flash"
+    phx-value-key="error"><%= live_flash(@flash, :error) %></p>
+
+  <%= @inner_content %>
+</main>
+<%= live_render @socket, SpermWhale.Tepmlates.FooterComponent, session: %{}, id: "footer" %>
