@@ -2,5 +2,7 @@ main {
   min-height: calc(100vh - 10rem);
 }
 
-@import "./header.postcss";
-@import "./footer.postcss";
+@import "./1_atoms/index.scss";
+@import "./2_moleculs/index.scss";
+@import "./3_organizms/index.scss";
+@import "./4_templates/index.scss";

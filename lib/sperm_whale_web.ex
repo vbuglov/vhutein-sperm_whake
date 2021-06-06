@@ -86,7 +86,7 @@ defmodule SpermWhaleWeb do
 
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
-
+      import SpermWhaleWeb.CommonHelper
       import SpermWhaleWeb.ErrorHelpers
       import SpermWhaleWeb.Gettext
       alias SpermWhaleWeb.Router.Helpers, as: Routes

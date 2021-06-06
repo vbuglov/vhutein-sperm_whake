@@ -1,0 +1,18 @@
+<div class="bg-whater-full-op w-full flex justify-center p-20 flex items-center">
+  <div class="w-4/5">
+    <div class="justify-between flex w-full">
+      <%= for %{card_title: text, idx: idx, card_items: card_items} <- @items do %>
+        <div class="h-96 w-96 p-6 shadow-md bg-whater-<%=idx%>">
+        <div class="mb-6">
+          <%=text%>
+        </div>
+            <ul>
+            <%= Enum.map(card_items, fn item -> %>
+              <li class="mb-1"><%=item %></li>
+            <%=end ) %>
+            <ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

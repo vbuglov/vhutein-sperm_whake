@@ -58,7 +58,7 @@ config :sperm_whale, SpermWhaleWeb.Endpoint,
 config :sperm_whale, SpermWhaleWeb.Endpoint,
   live_reload: [
     patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg|mp4)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/sperm_whale_web/(live|views)/.*(ex)$",
       ~r"lib/sperm_whale_web/templates/.*(eex)$"

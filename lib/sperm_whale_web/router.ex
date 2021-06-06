@@ -17,11 +17,17 @@ defmodule SpermWhaleWeb.Router do
   scope "/", SpermWhaleWeb do
     pipe_through :browser
 
-    live "/", PageLive, :index
+    live "/", MainLive, :index
     live "/planet", PageLive.Planet, :index
     live "/statistic", PageLive.Statistic, :index
     live "/structure", PageLive.Structure, :index
     live "/about", PageLive.About, :index
+  end
+
+  scope "/auth", SpermWhaleWeb do
+    pipe_through :browser
+
+    get "/", UserController, :log_in_user
   end
 
   # Other scopes may use custom stacks.

@@ -12,5 +12,4 @@ defmodule SpermWhaleWeb.PageLive.Structure do
     </div>
     """
   end
-
 end

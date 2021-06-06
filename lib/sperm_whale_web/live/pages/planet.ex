@@ -12,5 +12,4 @@ defmodule SpermWhaleWeb.PageLive.Planet do
     </div>
     """
   end
-
 end

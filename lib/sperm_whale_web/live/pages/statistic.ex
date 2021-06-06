@@ -12,5 +12,4 @@ defmodule SpermWhaleWeb.PageLive.Statistic do
     </div>
     """
   end
-
 end

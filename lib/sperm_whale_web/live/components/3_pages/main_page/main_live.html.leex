@@ -1,0 +1,16 @@
+<div>
+<%=
+  live_component @socket, VideoBannerSW,
+  id: 2,
+  card_type: :simple,
+  items: @items
+%>
+</div>
+<section>
+<%=
+  live_component @socket, CardBlock,
+  id: 1,
+  card_type: :simple,
+  items: @items
+%>
+</section>
