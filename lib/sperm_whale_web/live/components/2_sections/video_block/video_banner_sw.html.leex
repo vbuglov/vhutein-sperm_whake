@@ -1,6 +1,29 @@
-<section>
-    <video width="320" height="240" controls>
-    <source src="/videos/sperrm_video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+<section class="relative">
+  <div
+    class="absolute top-0 right-0 bottom-0 left-0 text-white flex items-center"
+    style="background-color: rgba(0, 0, 0, 0.8)"
+  >
+    <div style="padding-left: 10%">
+      <h1 class="text-7xl">Кашалот</h1>
+      <h2 class="text-xl font-light mb-4 text-blue-200">
+        physeter macrocephalus
+      </h2>
+      <%= live_component @socket, IconText, id: "sperm_info_status_1", props:
+      @sperm_info.status, class: "mb-4" %>
+
+      <div class="font-light max-w-lg">
+        стадное животное, живущее большими группами, достигающими иногда сотен и
+        даже тысяч голов.
+      </div>
+
+      <div>
+      </div>
+    </div>
+  </div>
+  <figure style="height: calc(100vh - 64px); width: 99vw; overflow: hidden">
+    <video muted loop style="width: 110vw">
+      <source src="/videos/sperrm_video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
     </video>
+  </figure>
 </section>

@@ -1,0 +1,29 @@
+<section
+  style="width: 100%; min-height: 100px"
+  class="flex flex-col items-center mb-52"
+>
+  <%= live_component @socket, Title, id: "learn_more_title", props: %{ class:
+  "mb-6", title: "Узнать больше о кашалотах", subtitle: "Погружаемся еще
+  глубже..." } %>
+  <span
+    style="max-width: 500px"
+    class="text-center inline-block text-xl mb-8 text-gray-800"
+    >На нашем сайте изложена более подробная информация о кашалотах</span
+  >
+  <div>
+    <button
+      type="button"
+      style="width: 200px"
+      class="px-8 mr-4 py-4 rounded-sm border border-gray-900"
+    >
+      Ареал
+    </button>
+    <button
+      type="button"
+      style="width: 200px"
+      class="px-8 py-4 rounded-sm border bg-black text-white"
+    >
+      Ареал
+    </button>
+  </div>
+</section>

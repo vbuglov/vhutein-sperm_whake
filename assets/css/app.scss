@@ -6,3 +6,9 @@ main {
 @import "./2_moleculs/index.scss";
 @import "./3_organizms/index.scss";
 @import "./4_templates/index.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap");
+
+* {
+  font-family: "Nunito";
+}

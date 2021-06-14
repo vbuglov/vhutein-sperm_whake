@@ -24,7 +24,7 @@ defmodule SpermWhaleWeb.Endpoint do
     at: "/",
     from: :sperm_whale,
     gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.tx videos)
+    only: ~w(css fonts images js favicon.ico robots.tx videos webfonts)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
