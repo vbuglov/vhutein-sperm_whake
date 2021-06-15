@@ -1,10 +1,7 @@
 defmodule SpermWhaleWeb.MainLive do
   use SpermWhaleWeb, :live_view
 
-  alias SpermWhaleWeb.Components.Sections.CardBlock
-  alias SpermWhaleWeb.Components.Sections.VideoBannerSW
-  alias SpermWhaleWeb.Components.Sections.CommonForm
-  alias SpermWhaleWeb.Components.Sections.LearnMore
+  alias SpermWhaleWeb.Components.Sections.{CardBlock, VideoBannerSW, CommonForm, LearnMore}
 
   def mount(_params, _session, socket) do
     socket = assign(socket, items: with_index(item_list()), sperm_info: sperm_info())
@@ -56,34 +53,34 @@ defmodule SpermWhaleWeb.MainLive do
       classification:
         with_index([
           %{
-            icon: "fab fa-accessible-icon",
+            icon: "fal fa-feather-alt",
             title: "Домен:",
             text: "Эукариоты"
           },
           %{
-            icon: "fab fa-accessible-icon",
+            icon: "fal fa-crown",
             title: "Цартсво:",
             text: "Животные"
           },
           %{
-            icon: "fab fa-accessible-icon",
+            icon: "fal fa-hippo",
             title: "Класс:",
             text: "Млекопитающие"
           },
           %{
-            icon: "fab fa-accessible-icon",
+            icon: "fal fa-users",
             title: "Отряд",
             text: "Китопарнокопытные"
           },
           %{
-            icon: "fab fa-accessible-icon",
+            icon: "fal fa-house",
             title: "Семейство",
             text: "Кашалоттовые"
           },
           %{
-            icon: "fab fa-accessible-icon",
+            icon: "fal fa-whale",
             title: "Вид",
-            text: "Кашалотя"
+            text: "Кашалот"
           }
         ])
     }

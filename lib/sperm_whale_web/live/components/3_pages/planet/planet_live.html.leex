@@ -1,0 +1,11 @@
+<section class="flex justify-center mt-10">
+  <div style="max-width: 1080px; width: 100%">
+  <%= live_component @socket, Title, id: "learn_more_title", props: %{
+        class: "mb-6", title: "Карта", subtitle:
+        "Да поднимутся веки" } %>
+    <p style="text-align: center" class="mb-4">
+      Обитает в тропическом и субтропическом поясе Мирового океана, летом заходя в умеренные воды. Изучены в основном обсохшие и выброшенные на берег экземпляры. Карликовых кашалотов наблюдали в Северной Атлантике от Ирландии и Нидерландов до Канарских островов и о. Мадейра и от Новой Шотландии (Канада) до Кубы
+    </p>
+    <div phx-hook="MapBuilder" style="height: 560px; width: 1080px" id="mapid"></div>
+  </div>
+</section>

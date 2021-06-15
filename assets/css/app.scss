@@ -12,3 +12,17 @@ main {
 * {
   font-family: "Nunito";
 }
+
+svg * {
+  transition: all 0.3s;
+}
+
+.svg_body {
+  fill: #65605d;
+  cursor: pointer;
+}
+
+.svg_body:hover {
+  fill: #555864;
+  cursor: pointer;
+}

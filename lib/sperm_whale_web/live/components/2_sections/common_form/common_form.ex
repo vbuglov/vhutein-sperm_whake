@@ -7,4 +7,8 @@ defmodule SpermWhaleWeb.Components.Sections.CommonForm do
     socket = assign(socket, card_type: nil)
     {:ok, socket}
   end
+
+  def update(assigns, socket) do
+    {:ok, assign(socket, assigns)}
+  end
 end

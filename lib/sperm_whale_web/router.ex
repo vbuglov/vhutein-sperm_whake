@@ -18,9 +18,9 @@ defmodule SpermWhaleWeb.Router do
     pipe_through :browser
 
     live "/", MainLive, :index
-    live "/planet", PageLive.Planet, :index
-    live "/statistic", PageLive.Statistic, :index
-    live "/structure", PageLive.Structure, :index
+    live "/planet", PlanetLive, :planet
+    live "/statistic", StatisticLive, :statistic
+    live "/structure", StructureLive, :structure
     live "/about", PageLive.About, :index
   end
 

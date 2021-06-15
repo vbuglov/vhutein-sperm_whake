@@ -1,27 +1,29 @@
 <section class="relative">
   <div
     class="absolute top-0 right-0 bottom-0 left-0 text-white flex items-center"
-    style="background-color: rgba(0, 0, 0, 0.8)"
+    style="background: linear-gradient(104.64deg, rgba(0, 0, 0, 0.9) 3.38%, rgba(0, 0, 0, 0.6) 95.31%)"
   >
     <div style="padding-left: 10%">
       <h1 class="text-7xl">Кашалот</h1>
-      <h2 class="text-xl font-light mb-4 text-blue-200">
+      <h2 class="text-xl font-light mb-8 text-blue-200">
         physeter macrocephalus
       </h2>
-      <%= live_component @socket, IconText, id: "sperm_info_status_1", props:
-      @sperm_info.status, class: "mb-4" %>
+      <%= live_component @socket, IconText, id: "sperm_info_status_1", classification: @sperm_info.status, class: "mb-8", text_class: "text-red-200" %>
 
-      <div class="font-light max-w-lg">
+      <div class="font-light max-w-lg mb-16">
         стадное животное, живущее большими группами, достигающими иногда сотен и
         даже тысяч голов.
       </div>
 
-      <div>
+      <div style="max-width: 800px" class="flex flex-wrap">
+        <%= for i <- @sperm_info[:classification] do %>
+          <%= live_component @socket, IconText, id: "sperm_info_classification_#{i.idx}", classification: i, class: "w-64 mb-4", text_class: "text-green-200"  %>
+        <% end %>
       </div>
     </div>
   </div>
   <figure style="height: calc(100vh - 64px); width: 99vw; overflow: hidden">
-    <video muted loop style="width: 110vw">
+    <video autoplay muted loop style="width: 110vw">
       <source src="/videos/sperrm_video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>

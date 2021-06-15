@@ -21,7 +21,6 @@ defmodule SpermWhale.Tepmlates.HeaderComponent do
           <li><a href="/statistic">Статистика</a></li>
           <li><a href="/planet">Ареал</a></li>
           <li><a href="/structure">Строение</a></li>
-          <li><a href="/about">О проекте</a></li>
           <div style="width: 1px" class="h-100 bg-white"></div>
           <li>Rus</li>
         </ul>

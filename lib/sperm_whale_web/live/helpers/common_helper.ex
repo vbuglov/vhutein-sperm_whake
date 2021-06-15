@@ -10,11 +10,8 @@ defmodule SpermWhaleWeb.CommonHelper do
   defp put_elem({map, idx}) when is_map(map), do: Map.put(map, :idx, idx)
   defp put_elem({elem, idx}), do: %{elem: elem, idx: idx}
 
-  def random_string(length) do
-    :crypto.strong_rand_bytes(length) |> Base.url_encode64() |> binary_part(0, length)
-  end
+  def add_class_if_exist(nil), do: ""
+  def add_class_if_exist(class), do: class
 
-  def random_key() do
-    random_string(6)
-  end
+  def add_optional(assigns, list), do: Enum.reduce(list, assigns, &Map.put_new(&2, &1, nil))
 end
