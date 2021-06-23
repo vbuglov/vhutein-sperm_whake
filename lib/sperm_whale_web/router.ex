@@ -21,7 +21,7 @@ defmodule SpermWhaleWeb.Router do
     live "/planet", PlanetLive, :planet
     live "/statistic", StatisticLive, :statistic
     live "/structure", StructureLive, :structure
-    live "/about", PageLive.About, :index
+    live "/contacts", ContactsLive, :index
   end
 
   scope "/auth", SpermWhaleWeb do

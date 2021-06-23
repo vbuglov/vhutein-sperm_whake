@@ -13,8 +13,8 @@ defmodule SpermWhale.Tepmlates.FooterComponent do
     "
     >
     <img
-      style="height: 80px;margin-right: 150px"
-      src="/images/favicon.ico"
+      style="height: 100px; margin-right: 150px"
+      src="/images/logo_white.svg"
       alt=""
     />
     <img

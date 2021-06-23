@@ -15,14 +15,77 @@ main {
 
 svg * {
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .svg_body {
   fill: #65605d;
-  cursor: pointer;
+}
+
+.svg_mouth {
+  fill: #f5f4e6;
+}
+
+.svg_head {
+  fill: #e6e0c6;
+}
+
+.svg_eye {
+  fill: #c4beb1;
+}
+
+.svg_melon {
+  fill: #d4d1a8;
+}
+
+.svg_top_sperm {
+  fill: #ab706d;
+}
+
+.svg_mid_sperm {
+  fill: #8a6d6b;
+}
+
+.svg_bott_sperm {
+  fill: #4e677a;
+}
+
+.svg_liver {
+  fill: #aa5341;
+}
+
+.svg_liver:hover {
+  fill: #753427;
+}
+
+.svg_bott_sperm:hover {
+  fill: #4f3b86;
+}
+
+.svg_mid_sperm:hover {
+  fill: #82628f;
+}
+
+.svg_top_sperm:hover {
+  fill: #95aa5c;
+}
+
+.svg_melon:hover {
+  fill: #8ec78c;
+}
+
+.svg_eye:hover {
+  fill: #bea5b2;
+}
+
+.svg_head:hover {
+  fill: #dfd8cf;
+}
+
+.svg_mouth:hover {
+  fill: #ffffff;
 }
 
 .svg_body:hover {
   fill: #555864;
-  cursor: pointer;
 }

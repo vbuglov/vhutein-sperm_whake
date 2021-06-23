@@ -49,8 +49,6 @@ const renderChart = () => {
       ],
     };
 
-    console.log(displayCharData);
-
     const config = {
       type: "line",
       data,
@@ -82,6 +80,69 @@ Hooks.ChartBuilder = {
   },
 };
 
+let radarChart = null;
+
+const renderRadarChart = () => {
+  if (document.getElementById("myRadarChart")) {
+    const data = {
+      labels: [
+        "Сердце ",
+        "Легкие",
+        "Почки",
+        "Печень",
+        "Мозг",
+        "Пищеварительный тракт",
+      ],
+      datasets: [
+        {
+          label: "Вес органов кашалота (кг)",
+          data: [160, 376, 400, 1000, 6, 800],
+          fill: true,
+          backgroundColor: "rgba(255, 99, 132, 0.2)",
+          borderColor: "rgb(255, 99, 132)",
+          pointBackgroundColor: "rgb(255, 99, 132)",
+          pointBorderColor: "#fff",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgb(255, 99, 132)",
+        },
+      ],
+    };
+
+    const config = {
+      type: "radar",
+      data: data,
+      options: {
+        responsive: true,
+        elements: {
+          line: {
+            borderWidth: 3,
+          },
+        },
+      },
+    };
+
+    if (!radarChart) {
+      radarChart = new Chart(document.getElementById("myRadarChart"), config);
+      radarChart.canvas.parentNode.style.width = "800px";
+    } else {
+      radarChart.update();
+    }
+  }
+};
+
+Hooks.ChartRadarBuilder = {
+  mounted() {
+    renderRadarChart();
+    this.handleEvent("new_chart_data", ({ data }) => {
+      displayCharData = +data;
+      renderRadarChart();
+    });
+  },
+  updated() {
+    renderRadarChart();
+  },
+};
+
 const renderMyMap = () => {
   const mymap = L.map("mapid").setView(
     [sData[0].Latitude, sData[0].Longitude],
@@ -101,7 +162,30 @@ const renderMyMap = () => {
   );
 };
 
+const renderAdressMap = () => {
+  const mymap = L.map("mapid").setView([60.051898, 30.429301], 17);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(mymap);
+
+  L.marker([60.051898, 30.429301], { icon: icons.blueIcon })
+    .bindPopup(
+      ` Число особей: 1, Год 2021, Большая улица 9к2, Почтовый индекс 412313`
+    )
+    .addTo(mymap);
+};
+
 Hooks.MapBuilder = {
+  mounted() {
+    renderAdressMap();
+  },
+  updated() {
+    renderAdressMap();
+  },
+};
+
+Hooks.AdressMapBuilder = {
   mounted() {
     renderMyMap();
   },
